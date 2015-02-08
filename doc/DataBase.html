@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class DataBase - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/Database.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-add_entry">#add_entry</a>
+    
+    <li ><a href="#method-i-build_database">#build_database</a>
+    
+    <li ><a href="#method-i-chose_database">#chose_database</a>
+    
+    <li ><a href="#method-i-get_amount">#get_amount</a>
+    
+    <li ><a href="#method-i-get_database">#get_database</a>
+    
+    <li ><a href="#method-i-get_movie_by_user">#get_movie_by_user</a>
+    
+    <li ><a href="#method-i-get_rate">#get_rate</a>
+    
+    <li ><a href="#method-i-get_user_by_movie">#get_user_by_movie</a>
+    
+    <li ><a href="#method-i-load_data">#load_data</a>
+    
+    <li ><a href="#method-i-print_database">#print_database</a>
+    
+    <li ><a href="#method-i-print_db_status">#print_db_status</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./ml-100k/README.html">README</a>
+  
+    <li class="file"><a href="./ml-100k/allbut_pl.html">allbut.pl</a>
+  
+    <li class="file"><a href="./ml-100k/mku_sh.html">mku.sh</a>
+  
+    <li class="file"><a href="./ml-100k/u_data.html">u.data</a>
+  
+    <li class="file"><a href="./ml-100k/u_genre.html">u.genre</a>
+  
+    <li class="file"><a href="./ml-100k/u_info.html">u.info</a>
+  
+    <li class="file"><a href="./ml-100k/u_occupation.html">u.occupation</a>
+  
+    <li class="file"><a href="./ml-100k/u_user.html">u.user</a>
+  
+    <li class="file"><a href="./ml-100k/u1_base.html">u1.base</a>
+  
+    <li class="file"><a href="./ml-100k/u1_test.html">u1.test</a>
+  
+    <li class="file"><a href="./ml-100k/u2_base.html">u2.base</a>
+  
+    <li class="file"><a href="./ml-100k/u2_test.html">u2.test</a>
+  
+    <li class="file"><a href="./ml-100k/u3_base.html">u3.base</a>
+  
+    <li class="file"><a href="./ml-100k/u3_test.html">u3.test</a>
+  
+    <li class="file"><a href="./ml-100k/u4_base.html">u4.base</a>
+  
+    <li class="file"><a href="./ml-100k/u4_test.html">u4.test</a>
+  
+    <li class="file"><a href="./ml-100k/u5_base.html">u5.base</a>
+  
+    <li class="file"><a href="./ml-100k/u5_test.html">u5.test</a>
+  
+    <li class="file"><a href="./ml-100k/ua_base.html">ua.base</a>
+  
+    <li class="file"><a href="./ml-100k/ua_test.html">ua.test</a>
+  
+    <li class="file"><a href="./ml-100k/ub_base.html">ub.base</a>
+  
+    <li class="file"><a href="./ml-100k/ub_test.html">ub.test</a>
+  
+    <li class="file"><a href="./movie2_gemspec.html">movie2.gemspec</a>
+  
+    <li class="file"><a href="./output/output_predict_txt.html">output_predict</a>
+  
+    <li class="file"><a href="./output/output_static_txt.html">output_static</a>
+  
+    <li class="file"><a href="./output/report/report_aux.html">report.aux</a>
+  
+    <li class="file"><a href="./output/report/report_log.html">report.log</a>
+  
+    <li class="file"><a href="./output/report/report_out.html">report.out</a>
+  
+    <li class="file"><a href="./output/report/report_tex.html">report.tex</a>
+  
+    <li class="file"><a href="./test_data/my_test_base.html">my_test.base</a>
+  
+    <li class="file"><a href="./test_data/my_test_test.html">my_test.test</a>
+  
+    <li class="file"><a href="./test_data/my_test_expend_base.html">my_test_expend.base</a>
+  
+    <li class="file"><a href="./test_data/my_test_expend_test.html">my_test_expend.test</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DataBase.html">DataBase</a>
+  
+    <li><a href="./MovieData.html">MovieData</a>
+  
+    <li><a href="./MovieTest.html">MovieTest</a>
+  
+    <li><a href="./TestDataBase.html">TestDataBase</a>
+  
+    <li><a href="./TestMovieData.html">TestMovieData</a>
+  
+    <li><a href="./Test_MovieTest.html">Test_MovieTest</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class DataBase</h1>
+
+  <div id="description" class="description">
+    
+<p>This class provide a database for regulating the test and train data.</p>
+
+<pre class="ruby"><span class="ruby-constant">Four</span> <span class="ruby-identifier">hash</span> <span class="ruby-identifier">table</span> <span class="ruby-identifier">are</span> <span class="ruby-identifier">contained</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">this</span> <span class="ruby-keyword">class</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">store</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">data</span>. <span class="ruby-constant">Each</span> <span class="ruby-identifier">hash</span> <span class="ruby-identifier">contain</span> <span class="ruby-identifier">another</span> <span class="ruby-identifier">hash</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">value</span>.
+<span class="ruby-constant">The</span> <span class="ruby-identifier">four</span> <span class="ruby-identifier">categories</span> <span class="ruby-identifier">are</span><span class="ruby-operator">:</span>
+<span class="ruby-value">1</span>.<span class="ruby-constant">Hash</span> <span class="ruby-identifier">which</span> <span class="ruby-identifier">store</span> <span class="ruby-identifier">test</span> <span class="ruby-identifier">data</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">use</span> <span class="ruby-identifier">user</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">first</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">movie</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">second</span> <span class="ruby-identifier">key</span>.
+<span class="ruby-value">2</span>.<span class="ruby-constant">Hash</span> <span class="ruby-identifier">which</span> <span class="ruby-identifier">store</span> <span class="ruby-identifier">test</span> <span class="ruby-identifier">data</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">use</span> <span class="ruby-identifier">movie</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">first</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">user</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">second</span> <span class="ruby-identifier">key</span>.
+<span class="ruby-value">3</span>.<span class="ruby-constant">Hash</span> <span class="ruby-identifier">which</span> <span class="ruby-identifier">store</span> <span class="ruby-identifier">training</span> <span class="ruby-identifier">data</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">use</span> <span class="ruby-identifier">user</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">first</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">movie</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">second</span> <span class="ruby-identifier">key</span>.
+<span class="ruby-value">4</span>.<span class="ruby-constant">Hash</span> <span class="ruby-identifier">which</span> <span class="ruby-identifier">store</span> <span class="ruby-identifier">training</span> <span class="ruby-identifier">data</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">use</span> <span class="ruby-identifier">movie</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">first</span> <span class="ruby-identifier">key</span>, <span class="ruby-identifier">user</span> <span class="ruby-identifier">id</span> <span class="ruby-identifier">as</span> <span class="ruby-identifier">second</span> <span class="ruby-identifier">key</span>. 
+<span class="ruby-constant">Database</span> <span class="ruby-keyword">class</span> <span class="ruby-identifier">provide</span> <span class="ruby-identifier">interface</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">retrieving</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">movie</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">rate</span>. <span class="ruby-constant">Also</span> <span class="ruby-identifier">could</span> <span class="ruby-keyword">return</span> 
+<span class="ruby-identifier">the</span> <span class="ruby-identifier">four</span> <span class="ruby-identifier">hashes</span> <span class="ruby-identifier">inside</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">class</span>.
+</pre>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(dir_path,file_name=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Initialize four hashes and load data into them. The parameter require the
+directory name</p>
+
+<pre>and the file name without postfix.</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 15</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">dir_path</span>,<span class="ruby-identifier">file_name</span>=<span class="ruby-keyword">nil</span>)
+   <span class="ruby-ivar">@test_data_user_key</span>={}
+   <span class="ruby-ivar">@test_data_movie_key</span>={}
+   <span class="ruby-ivar">@base_data_user_key</span>={}
+   <span class="ruby-ivar">@base_data_movie_key</span>={}
+   
+   <span class="ruby-identifier">load_data</span>(<span class="ruby-identifier">dir_path</span>,<span class="ruby-identifier">file_name</span>)
+   <span class="ruby-ivar">@user_amount_base</span>=<span class="ruby-identifier">get_amount</span>(<span class="ruby-ivar">@base_data_user_key</span>)
+   <span class="ruby-ivar">@movie_amount_base</span>=<span class="ruby-identifier">get_amount</span>(<span class="ruby-ivar">@base_data_movie_key</span>)
+   <span class="ruby-ivar">@user_amount_test</span>=<span class="ruby-identifier">get_amount</span>(<span class="ruby-ivar">@test_data_user_key</span>)
+   <span class="ruby-ivar">@movie_amount_test</span>=<span class="ruby-identifier">get_amount</span>(<span class="ruby-ivar">@test_data_movie_key</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_entry" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_entry</span><span
+            class="method-args">(database,first_key,second_key,value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Add one entry into database</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add_entry-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_entry</span>(<span class="ruby-identifier">database</span>,<span class="ruby-identifier">first_key</span>,<span class="ruby-identifier">second_key</span>,<span class="ruby-identifier">value</span>)<span class="ruby-comment">#add an entry to database.</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">database</span>.<span class="ruby-identifier">has_key?</span> <span class="ruby-identifier">first_key</span>   <span class="ruby-comment">#nested dict</span>
+                            <span class="ruby-identifier">database</span>[<span class="ruby-identifier">first_key</span>][<span class="ruby-identifier">second_key</span>]=<span class="ruby-identifier">value</span>
+                    <span class="ruby-keyword">else</span>
+                            <span class="ruby-identifier">database</span>[<span class="ruby-identifier">first_key</span>]={<span class="ruby-identifier">second_key</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">value</span>} <span class="ruby-comment">#build new dict to hold movie:rate_score</span>
+                    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_entry-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_entry-method -->
+
+    
+      <div id="method-i-build_database" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">build_database</span><span
+            class="method-args">(file, database_user_key,database_movie_key)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Add all entries into hashes. The parameters are the file read in Data will
+be ordered both by user id and movie id and stored in 2 hash table</p>
+          
+          
+
+          
+          <div class="method-source-code" id="build_database-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">build_database</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">database_user_key</span>,<span class="ruby-identifier">database_movie_key</span>)
+    <span class="ruby-identifier">file</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> 
+                    <span class="ruby-identifier">tokens</span>=<span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\t&quot;</span>)
+                    <span class="ruby-identifier">user_id</span>=<span class="ruby-identifier">tokens</span>[<span class="ruby-value">0</span>]
+                    <span class="ruby-identifier">movie_id</span>=<span class="ruby-identifier">tokens</span>[<span class="ruby-value">1</span>]
+                    <span class="ruby-identifier">rate_score</span>=<span class="ruby-identifier">tokens</span>[<span class="ruby-value">2</span>]
+                    <span class="ruby-identifier">add_entry</span>(<span class="ruby-identifier">database_user_key</span>,<span class="ruby-identifier">user_id</span>,<span class="ruby-identifier">movie_id</span>,<span class="ruby-identifier">rate_score</span>)
+                    <span class="ruby-identifier">add_entry</span>(<span class="ruby-identifier">database_movie_key</span>,<span class="ruby-identifier">movie_id</span>,<span class="ruby-identifier">user_id</span>,<span class="ruby-identifier">rate_score</span>)
+    <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- build_database-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- build_database-method -->
+
+    
+      <div id="method-i-chose_database" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">chose_database</span><span
+            class="method-args">(key_type,database_type,key)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="chose_database-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">chose_database</span>(<span class="ruby-identifier">key_type</span>,<span class="ruby-identifier">database_type</span>,<span class="ruby-identifier">key</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:test</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:movie</span>
+                    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@test_data_movie_key</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:test</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:user</span>
+                    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@test_data_user_key</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:base</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:movie</span>
+                    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@base_data_movie_key</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:base</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:user</span>
+                    <span class="ruby-keyword">return</span> <span class="ruby-ivar">@base_data_user_key</span>[<span class="ruby-identifier">key</span>]
+    <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Unknown database type&quot;</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- chose_database-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- chose_database-method -->
+
+    
+      <div id="method-i-get_amount" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_amount</span><span
+            class="method-args">(database)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return the size of database</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_amount-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_amount</span>(<span class="ruby-identifier">database</span>)
+            <span class="ruby-keyword">return</span> <span class="ruby-identifier">database</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- get_amount-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_amount-method -->
+
+    
+      <div id="method-i-get_database" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_database</span><span
+            class="method-args">(key_type=:user_key,database_type=:test)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>return one of the four database according to parameter.  In default, return
+the hash which stores test date and ordered by user id. The key_type is
+confine into 2 categories which are all symbols  :user_key and :movie_key
+database_type are also confined into 2 types, :test | :base  Any mismatch
+will raise a runtime exception</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_database-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_database</span>(<span class="ruby-identifier">key_type</span>=<span class="ruby-value">:user_key</span>,<span class="ruby-identifier">database_type</span>=<span class="ruby-value">:test</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:user_key</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:test</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-ivar">@test_data_user_key</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:movie_key</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:test</span> 
+            <span class="ruby-keyword">return</span> <span class="ruby-ivar">@test_data_movie_key</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:user_key</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:base</span> 
+            <span class="ruby-keyword">return</span> <span class="ruby-ivar">@base_data_user_key</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">key_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:movie_key</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">database_type</span><span class="ruby-operator">==</span> <span class="ruby-value">:base</span> 
+            <span class="ruby-keyword">return</span> <span class="ruby-ivar">@base_data_movie_key</span>
+    <span class="ruby-keyword">else</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;wrong parameter&quot;</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_database-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_database-method -->
+
+    
+      <div id="method-i-get_movie_by_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_movie_by_user</span><span
+            class="method-args">(user, database_type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Get all the movies watched by user</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_movie_by_user-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_movie_by_user</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">database_type</span>)<span class="ruby-comment">#user should be string not int</span>
+    <span class="ruby-identifier">user</span>=<span class="ruby-identifier">user</span>.<span class="ruby-identifier">to_s</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-identifier">chose_database</span>(<span class="ruby-value">:user</span>,<span class="ruby-identifier">database_type</span>,<span class="ruby-identifier">user</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_movie_by_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_movie_by_user-method -->
+
+    
+      <div id="method-i-get_rate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_rate</span><span
+            class="method-args">(user,movie,database_type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrive the rate from database</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_rate-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_rate</span>(<span class="ruby-identifier">user</span>,<span class="ruby-identifier">movie</span>,<span class="ruby-identifier">database_type</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">get_movie_by_user</span>(<span class="ruby-identifier">user</span>,<span class="ruby-identifier">database_type</span>)[<span class="ruby-identifier">movie</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_rate-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_rate-method -->
+
+    
+      <div id="method-i-get_user_by_movie" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_user_by_movie</span><span
+            class="method-args">(movie,database_type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Get all the viewers of the movie</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_user_by_movie-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_user_by_movie</span>(<span class="ruby-identifier">movie</span>,<span class="ruby-identifier">database_type</span>)<span class="ruby-comment"># :base or :test this function will return a hash</span>
+    <span class="ruby-identifier">movie</span>=<span class="ruby-identifier">movie</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">chose_database</span>(<span class="ruby-value">:movie</span>,<span class="ruby-identifier">database_type</span>,<span class="ruby-identifier">movie</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_user_by_movie-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_user_by_movie-method -->
+
+    
+      <div id="method-i-load_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load_data</span><span
+            class="method-args">(dir_path,file_name=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Load data into database, the base path is hard coded. dir_path design the
+dir path, file_name indicate the file name without postfix the postfix is
+constrained to be .base and .test</p>
+          
+          
+
+          
+          <div class="method-source-code" id="load_data-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_data</span>(<span class="ruby-identifier">dir_path</span>,<span class="ruby-identifier">file_name</span>=<span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">loca_path</span>=<span class="ruby-string">&#39;/Users/jinfenglin/Dropbox/cosi105b_jinfenglin/movies-2/&#39;</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">file_name</span>
+      <span class="ruby-identifier">base</span>=<span class="ruby-identifier">loca_path</span><span class="ruby-operator">+</span><span class="ruby-identifier">dir_path</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;/&#39;</span><span class="ruby-operator">+</span><span class="ruby-identifier">file_name</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;.base&#39;</span>
+      <span class="ruby-identifier">test</span>=<span class="ruby-identifier">loca_path</span><span class="ruby-operator">+</span><span class="ruby-identifier">dir_path</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;/&#39;</span><span class="ruby-operator">+</span><span class="ruby-identifier">file_name</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;.test&#39;</span>
+      <span class="ruby-identifier">base_file</span>=<span class="ruby-identifier">open</span>(<span class="ruby-identifier">base</span>)
+      <span class="ruby-identifier">test_file</span>=<span class="ruby-identifier">open</span>(<span class="ruby-identifier">test</span>)
+      <span class="ruby-identifier">build_database</span>(<span class="ruby-identifier">base_file</span>,<span class="ruby-ivar">@base_data_user_key</span>,<span class="ruby-ivar">@base_data_movie_key</span>)
+      <span class="ruby-identifier">build_database</span>(<span class="ruby-identifier">test_file</span>,<span class="ruby-ivar">@test_data_user_key</span>,<span class="ruby-ivar">@test_data_movie_key</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">path</span>=<span class="ruby-identifier">loca_path</span><span class="ruby-operator">+</span><span class="ruby-identifier">dir_path</span><span class="ruby-operator">+</span><span class="ruby-string">&#39;/u.data&#39;</span>
+      <span class="ruby-identifier">file</span>=<span class="ruby-identifier">open</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-identifier">build_database</span>(<span class="ruby-identifier">file</span>,<span class="ruby-ivar">@base_data_user_key</span>,<span class="ruby-ivar">@base_data_movie_key</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- load_data-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- load_data-method -->
+
+    
+      <div id="method-i-print_database" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">print_database</span><span
+            class="method-args">(database)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Show every entry in the database</p>
+          
+          
+
+          
+          <div class="method-source-code" id="print_database-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_database</span>(<span class="ruby-identifier">database</span>)
+            <span class="ruby-identifier">database</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">info_dict</span><span class="ruby-operator">|</span> 
+                    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;key:&#39;</span><span class="ruby-operator">+</span><span class="ruby-identifier">key</span>
+                    <span class="ruby-identifier">info_dict</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">movie_id</span>,<span class="ruby-identifier">rate</span><span class="ruby-operator">|</span>
+                            <span class="ruby-identifier">print</span> <span class="ruby-identifier">movie_id</span><span class="ruby-operator">+</span><span class="ruby-string">&#39; &#39;</span>
+                            <span class="ruby-identifier">puts</span> <span class="ruby-identifier">rate</span><span class="ruby-operator">+</span><span class="ruby-string">&#39; &#39;</span>       
+                    <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- print_database-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- print_database-method -->
+
+    
+      <div id="method-i-print_db_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">print_db_status</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Show the sizes of all the database</p>
+          
+          
+
+          
+          <div class="method-source-code" id="print_db_status-source">
+            <pre><span class="ruby-comment"># File lib/Database.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_db_status</span>
+    <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;user_amount_base:&quot;</span>
+    <span class="ruby-identifier">puts</span>  <span class="ruby-ivar">@user_amount_base</span>
+    
+    <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;movie_amount_base:&quot;</span>
+    <span class="ruby-identifier">puts</span>  <span class="ruby-ivar">@movie_amount_base</span>
+    
+    <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;user_amount_test:&quot;</span>
+    <span class="ruby-identifier">puts</span>  <span class="ruby-ivar">@user_amount_test</span>
+    
+    <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;movie_amount_test:&quot;</span>
+    <span class="ruby-identifier">puts</span>  <span class="ruby-ivar">@movie_amount_test</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- print_db_status-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- print_db_status-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

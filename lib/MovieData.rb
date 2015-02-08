@@ -28,8 +28,8 @@ class MovieData
 	end
 	
 	##
-	#Get the average score of the k user who has watched this movie 
-	#and has highest similarity with this user
+	# Get the average rating of the k user who has watched this movie 
+	# and has highest similarity with  user u.
 	#
 	def predict(u,m,k=25) 
 		t1=Time.now

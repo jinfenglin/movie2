@@ -1,6 +1,7 @@
 require 'ostruct'
 class MovieTest
-	def initialize(database)#get the gold database from MovieData
+	def initialize(database)
+	#get the gold database from MovieData.
 		@predict_result={}
 		@gold=database
 		@mean_value=nil
@@ -9,7 +10,7 @@ class MovieTest
 	end
 	
 	##
-	# Add one entry into our result hash
+	# Add one entry into result hash
 	#
 	def add_entry(user,movie,real,pred)
 		key=OpenStruct.new(:user=>user,:movie=>movie)

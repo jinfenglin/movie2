@@ -1,12 +1,17 @@
 ##
 #This class provide a database for regulating the test and train data.
-# Four database are contained in this class, training and testing data are ordered by
-# user or movie.
+# Four hash table are contained in this class to store the data. Each hash contain another hash as value.
+# The four categories are:
+# 1.Hash which store test data and use user id as first key, movie id as second key.
+# 2.Hash which store test data and use movie id as first key, user id as second key.
+# 3.Hash which store training data and use user id as first key, movie id as second key.
+# 4.Hash which store training data and use movie id as first key, user id as second key. 
 # Database class provide interface for retrieving user, movie or rate. Also could return 
-# the four sub databases inside the class
+# the four hashes inside the class.
 #
 class DataBase	
-	#Initialize and load data into the four sub databases 
+	#Initialize four hashes and load data into them. The parameter require the directory name
+	# and the file name without postfix. 
 	def initialize(dir_path,file_name=nil)
        @test_data_user_key={}
        @test_data_movie_key={}
@@ -21,11 +26,11 @@ class DataBase
     end
     
     ##
-    # return one of the four database according parameter. In default, return the database store
-    # test date which is order by user.
-    # key_type: :user_key | :movie_key
-    # database_type: :test | :base
-    #
+    # return one of the four database according to parameter. 
+    # In default, return the hash which stores test date and ordered by user id.
+    # The key_type is confine into 2 categories which are all symbols  :user_key and :movie_key
+    # database_type are also confined into 2 types, :test | :base 
+    # Any mismatch will raise a runtime exception
     def get_database(key_type=:user_key,database_type=:test)
     	if key_type== :user_key and database_type== :test
     		return @test_data_user_key
@@ -62,7 +67,8 @@ class DataBase
     end
     
     ##
-    # Add all entries into sub databases
+    # Add all entries into hashes. The parameters are the file read in
+    # Data will be ordered both by user id and movie id and stored in 2 hash table
     #
     def build_database(file, database_user_key,database_movie_key)
         file.each do |line| 
@@ -81,8 +87,10 @@ class DataBase
     def get_amount(database)
    		return database.length
    	end
-
-	#Add one entry into database
+   	
+   	##
+	# Add one entry into database
+	#
     def add_entry(database,first_key,second_key,value)#add an entry to database.
    		if database.has_key? first_key   #nested dict
 				database[first_key][second_key]=value
