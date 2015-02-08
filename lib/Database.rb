@@ -115,19 +115,14 @@ class DataBase
     	return chose_database(:movie,database_type,movie)
     end
     def chose_database(key_type,database_type,key)
-    	case database_type
-    	when :test
-    		if key_type== :movie
+    	if database_type== :test and key_type== :movie
     			return @test_data_movie_key[key]
-    		elsif key_type== :user
+    	elsif database_type== :test and key_type== :user
     			return @test_data_user_key[key]
-    		end
-    	when :base
-    		if key_type== :movie
+    	elsif database_type== :base and key_type== :movie
     			return @base_data_movie_key[key]
-    		elsif key_type== :user
+    	elsif database_type== :base and key_type== :user
     			return @base_data_user_key[key]
-    		end
     	else
     		raise "Unknown database type"
     	end
