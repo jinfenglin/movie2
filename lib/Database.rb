@@ -101,16 +101,10 @@ class DataBase
     ##
     # Get all the movies watched by user
     #
+    
     def get_movie_by_user(user, database_type)#user should be string not int
     	user=user.to_s
-    	case database_type
-    	when :test
-    		return @test_data_user_key[user]
-    	when :base
-    		return @base_data_user_key[user]
-    	else：
-    		raise "Unknown database type"
-    	end
+		return chose_database(:user,database_type,user)
     end
     
     ##
@@ -118,12 +112,23 @@ class DataBase
     #
     def get_user_by_movie(movie,database_type)# :base or :test this function will return a hash
     	movie=movie.to_s
+    	return chose_database(:movie,database_type,movie)
+    end
+    def chose_database(key_type,database_type,key)
     	case database_type
     	when :test
-    		return @test_data_movie_key[movie]
+    		if key_type== :movie
+    			return @test_data_movie_key[key]
+    		elsif key_type== :user
+    			return @test_data_user_key[key]
+    		end
     	when :base
-    		return @base_data_movie_key[movie]
-    	else：
+    		if key_type== :movie
+    			return @base_data_movie_key[key]
+    		elsif key_type== :user
+    			return @base_data_user_key[key]
+    		end
+    	else
     		raise "Unknown database type"
     	end
     end
